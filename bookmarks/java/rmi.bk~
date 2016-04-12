@@ -1,3 +1,6 @@
 1. http://www.cnblogs.com/ninahan0419/archive/2009/06/25/javarmi.html
 
 2. http://www.daimami.com/web/225286.htm
+
+3. server hostname issue: http://yhjhappy234.blog.163.com/blog/static/316328322013024755704/
+	Djava.rmi.server.hostname=192.168.101.88
