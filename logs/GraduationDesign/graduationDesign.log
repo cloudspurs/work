@@ -1,0 +1,45 @@
+2016-03-18
+
+1. Struts2动态方法调用
+
+<!-- 动态方法调用：method属性设置调用的方法，默认调用execute()方法 -->  
+<action name="dmi-login" class="dmi.LoginRegisterAction">  
+    <result name="input">/dmi/login.jsp</result>  
+    <result name="error">/dmi/error.jsp</result>  
+    <result name="success">/dmi/welcome.jsp</result>  
+</action>  
+<action name="dmi-register" class="dmi.LoginRegisterAction" method="register" >  
+    <result name="input">/dmi/login.jsp</result>  
+    <result name="error">/dmi/error.jsp</result>  
+    <result name="success">/dmi/welcome.jsp</result>  
+</action>
+
+2. Package配置 
+
+Struts2框架使用包来管理Action和拦截器等。每个包就是多个Action、多个拦截器、多个拦截器引用的集合。使用package可以将逻辑上相关的一组Action，Result，Intercepter等组件分为一组，Package有些像对象，可以继承其他的Package，也可以被其他package继承，甚至可以定义抽象的Package。 
+
+Package的可以使用的属性：
+
+属性		是否必须  说明 
+name          	是        Package的表示，为了让其他的package引用 
+extends      	否        从哪个package集成行为 
+namespace 	否        参考Namespace配置说明 
+abstract      	否        定义这个package为抽象的，这个package中不需要定义action 
+
+package元素用于定义包配置，每个package元素定义了一个包配置。定义package元素时可以指定如下几个属性： 
+	name：必填，指定包的名字，该名字是该包被其他包引用的key。 
+	extends：可选，指定该包继承其他包。继承其他包，可以继承其他包中的Action定义、拦截器定义等。 
+	namespace：可选，定义该包的命名空间。 
+	abstract：可选，它指定该包是否是一个抽象包。抽象包不能包含Action定义。 
+
+*由于struts.xml文件是自上而下解析的，所以被集成的package要放在集成package的前边。
+
+2016.04.20
+
+1、Java static final
+	static： 变量是属于类的，不是实例级别的。只能通过类名调用，不能通过对象调用。
+	final：final修饰的类不能被继承，final修饰的方法不能被覆盖。
+
+
+
+
