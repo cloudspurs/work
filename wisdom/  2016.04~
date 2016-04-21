@@ -49,7 +49,6 @@ Agile Software Development Principles, Patterns, and Practices - Robert C.Martin
 	为了防止软件不必要的复杂性，我们允许自己被愚弄一次。者意味着我们在最初编写代码时，假设变化不会发生。当发生变化时，我们就创建抽象来隔离以后发生同样的变化。
 
 4、刺激变化
-	变化出现的越早，损失越小。
 
 
 
