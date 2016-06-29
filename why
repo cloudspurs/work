@@ -26,4 +26,34 @@
 
   console.log('in the zone: ' + !!zone.inTheZone);
   
+  'in the zone: false'
+  'in the zone: true'
+  
+2. Augmenting A Zone's Hook
+
+When you fork a zone, you'll often want to control how the parent zone's hook gets called.
+
+Prefixing a hook with $ means that the hook will be passed the parent zone's hook, and the hook will be expected to return the function to be invoked rather than be the function itself.
+
+var someZone = zone.fork({
+  afterTask: function () {
+    console.log('goodbye');
+  }
+});
+
+someZone.fork({
+  $afterTask: function (parentOnLeave) {
+    // return the hook
+    return function afterTask() {
+      parentOnLeave();
+      console.log('cya l8r');
+    };
+  }
+}).run(function () {
+  // do stuff
+});
+
+// logs: goodbye
+//       cya l8r
+  
   
