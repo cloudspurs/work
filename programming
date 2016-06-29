@@ -1,1 +1,14 @@
 1. ORM需要创建对象？性能问题就有了？Sql不也需要创建对象吗？
+
+2016-06-29
+
+1. SOLID
+  single responsibility
+  open-closed
+  Liskov subsititution
+  interface segregation-隔离
+  dependency inversion
+  
+2. transient
+  java语言的关键字，变量修饰符，如果用transient声明一个实例变量，当对象存储时，它的值不需要维持。
+  持久化对象时，用transient关键字标记的成员变量不参与序列化过程。
