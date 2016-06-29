@@ -12,3 +12,18 @@
     // project.title will contain the name of the project
   })
   
+  2016-06-29
+  
+  1. zone.js
+  
+  zone.fork().run(function () {
+    zone.inTheZone = true;
+  
+    setTimeout(function () {
+      console.log('in the zone: ' + !!zone.inTheZone);
+    }, 0);
+  });
+
+  console.log('in the zone: ' + !!zone.inTheZone);
+  
+  
