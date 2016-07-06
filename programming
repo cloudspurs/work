@@ -38,3 +38,8 @@
 
 1. IoC(inversion of control)
   A IoC container uses a class constructor to identify and inject its dependencies.
+  
+2016-07-06
+1. 守护进程
+   守护进程是脱离于终端并且在后台运行的进程。守护进程脱离于终端是为了避免进程在执行过程
+   中的信息不在任何终端上显示并且进程也不会被任何终端所产生的终端信息所打断。
